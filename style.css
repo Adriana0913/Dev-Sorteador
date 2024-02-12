@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+img {
+
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: blue;
+    margin-top: 30px;
+    margin-bottom: 26px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 200px;
+    height: 54px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.25));
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 37px;
+    color: black;
+    opacity: 1;
+    border-radius: 5px;
+
+}
+
+.input-min {
+    margin-right: 30px;
+}
+
+button {
+    margin-top: 20px;
+    height: 45px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: chartreuse;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 18px 40px rgba(174, 195, 70, 0.35);
+    transition: box-shadow 0.3s ease; /* Agregar transición a la sombra */
+}
+
+button:hover {
+ 
+    box-shadow: 0px 18px 40px rgba(174, 195, 70, 0.7); /* Ajustar sombra al pasar el mouse */
+    transform: scale(1.1); 
+}
+.animated {
+    animation-name: example;
+    animation-duration: 1s; /* Duración de la animación en segundos */
+}
+
+@keyframes example {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.result-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px); /* Mover hacia arriba inicialmente */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.result-container.show {
+    opacity: 1;
+    transform: translateY(0); /* Mover hacia arriba */
+}
